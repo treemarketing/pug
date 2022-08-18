@@ -1,0 +1,14 @@
+html
+    head
+        title='test pug'
+        style
+            include styles.css
+    body
+        h1=tittle
+        form(action='/products', method='post')
+            input(type='text', name='name', id='name')
+            input(type='text', name='price', id='price')
+            input(type='text', name='thumbnail', id='thumbnail')
+            input(type='submit', value= "cargar")
+            
+
