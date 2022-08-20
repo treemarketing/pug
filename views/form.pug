@@ -6,9 +6,9 @@ html
     body
         h1=tittle
         form(action='/products', method='post')
-            input(type='text', name='name', id='name')
-            input(type='text', name='price', id='price')
-            input(type='text', name='thumbnail', id='thumbnail')
+            input(type='text', placeholder="nombre" , name='name', id='name')
+            input(type='text', placeholder="precio" ,name='price', id='price')
+            input(type='text', placeholder="imagen" ,name='thumbnail', id='thumbnail')
             input(type='submit', value= "cargar")
-            
+    button#formulario(onclick="window.location.href='http://localhost:8080/products';") ver productos       
 

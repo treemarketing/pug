@@ -48,6 +48,10 @@ app.get('/form', (req, res) => {
 
 app.post('/products', (req, res) => {
   const {body} = req;
-  console.log(body)
-  res.end("final")
+  const lastId = productsHC[productsHC.length - 1];
+  
+  //agrego bien el body y agrego un id nuevo
+  let nuevoId = lastId.id + 1;
+  let insertBody = {id: nuevoId, title: body.name, price: body.price, thumbnail: body.thumbnail}
+  productsHC.push(insertBody);
 })
